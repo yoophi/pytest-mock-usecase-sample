@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pytest-mock-usecase"
+version = "0.1.0"
+description = ""
+authors = ["Pyunghyuk Yoo <62975595+purple-lion@users.noreply.github.com>"]
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Flask = "^2.0.2"
+pytest = "^6.2.5"
+pytest-mock = "^3.6.1"
+pytest-watch = "^4.2.0"
+pytest-cov = "^3.0.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.12b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
