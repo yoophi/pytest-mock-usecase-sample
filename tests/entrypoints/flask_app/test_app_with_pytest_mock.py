@@ -18,7 +18,6 @@ def test(client):
 
 
 def test_hello(client, mocker):
-    mocker.patch("app.use_cases.hello")
     mock_func = mocker.patch.object(
         HelloUseCase, "execute", return_value=ResponseSuccess(value="Tom")
     )
@@ -28,7 +27,6 @@ def test_hello(client, mocker):
 
 
 def test_hello_resource_error(client, mocker):
-    mocker.patch("app.use_cases.hello")
     mock_func = mocker.patch.object(
         HelloUseCase,
         "execute",
@@ -40,7 +38,6 @@ def test_hello_resource_error(client, mocker):
 
 
 def test_hello_invalid_request(client, mocker):
-    mocker.patch("app.use_cases.hello")
     invalid_ro = InvalidRequestObject()
     invalid_ro.add_error("invalid", "data is not valid")
 
